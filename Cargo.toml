@@ -6,3 +6,4 @@ edition = "2021"
 [dependencies]
 rand = "0.9.0"
 chrono = "0.4.39"
+rust-crypto = "0.2.36"
