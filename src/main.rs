@@ -26,7 +26,7 @@ fn main() {
     socket.join().unwrap(); // waiting for thread
 }
 
-fn start_messages(crp: Arc<Mutex<Crypt>>) -> thread::JoinHandle<()> {
+fn start_messages(crp: Arc<Mutex<Crypt>>) -> JoinHandle<()> {
     thread::spawn(move || {
         loop {
 
