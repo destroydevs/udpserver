@@ -84,7 +84,7 @@ fn rnd_phrase(phrase_length: usize) -> String {
     phrase.join(" ") // return
 }
 
-fn start_server(crp: Arc<Mutex<Crypt>>) -> thread::JoinHandle<()> {
+fn start_server(crp: Arc<Mutex<Crypt>>) -> JoinHandle<()> {
     thread::spawn(move || {
         // create listener for IP 127.0.0.1 and PORT 8080
         let socket = UdpSocket::bind("127.0.0.1:8080").expect("Failed to bind to address");
